@@ -9,7 +9,7 @@ import { Sound } from '../models/';
 })
 export class SoundService {
 
-  private readonly API = 'http://localhost:3000/Sound';
+  private readonly API = "http://localhost:3000/Sound";
 
   constructor(private http: HttpClient) {}
 

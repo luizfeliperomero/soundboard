@@ -1,5 +1,6 @@
 {
   "Sound": [
-    {"path": "assets/lotrTheme.wav" , "description": "Lotr Theme"}
+    {"path": "assets/lotrTheme.wav" , "description": "Lotr Theme"},
+    {"path": "assets/rain.wav" , "description": "Medium Rain"}
   ]
 }

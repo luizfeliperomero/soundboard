@@ -9,6 +9,8 @@ import { Sound } from '../../models';
 })
 export class PlayComponent implements OnInit {
 
+  private currentTime = 0;
+
   audio: HTMLAudioElement[];
   
   constructor(private soundService: SoundService) { }
@@ -21,31 +23,29 @@ export class PlayComponent implements OnInit {
   getter() {
     this.soundService.getSound().subscribe((data: Sound[]) => {
         data.forEach((sound) => {
-        this.audio.push(new Audio("http://localhost:4200/" + sound.path));
+        this.audio.push(new Audio(sound.path));
       }) 
     })
   }
 
   play(sound) {
+    this.currentTime = sound.currentTime;
     sound.load();
+    sound.currentTime = this.currentTime;
     sound.play();
-    console.log('Play works');
   }
 
   pause(sound) {
     sound.pause();
-    console.log('Pause works');
   }
 
   stop(sound) {
     sound.pause();
     sound.currentTime = 0;
-    console.log('stop works');
   }
 
   setVolume(ev, sound){
     sound.volume = ev.target.value;
-    console.log(ev.target.value);
   }
 
 }
