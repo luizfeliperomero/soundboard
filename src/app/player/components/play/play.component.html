@@ -13,12 +13,17 @@
   <body>
   <div class="container">
     <div class="content">
-      <div *ngFor="let sound of audio" class="player">
+      <div *ngFor="let sound of soundInfos" class="player" [ngStyle]="{
+          'border-color': (currentPlaying(sound) ? '#0f0' : '#0002')
+        }">
+        <p>{{ sound.sound.description }}</p>
         <div class="buttons">
           <button (click)="play(sound)">Play</button>
           <button (click)="pause(sound)">Pause</button>
           <button (click)="stop(sound)">Stop</button>
         </div>
+        <p>{{ sound.audio.duration }}</p>
+        <p>{{ sound.audio.currentTime }}</p>
         <div class="volume">
           <input type="range" min="0" max="1" step="0.01" value="0.5" (input)="setVolume($event, sound)">
         </div>

@@ -7,6 +7,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 5px;
+	border-style: ridge  ;
 }
 .volume {
 	display: flex;
@@ -25,9 +26,10 @@ p {
 	display: flex;
 	justify-content: center;
 	color: #fff;
+	font-weight: bold;
 }
 body {
-	background-image: url("../../../../assets/images/bgLandscape.jpg");
+	background-image: url("../../../../assets/images/bgRpg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 }

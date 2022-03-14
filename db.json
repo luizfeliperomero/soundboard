@@ -1,6 +1,11 @@
 {
   "Sound": [
     {"path": "assets/lotrTheme.wav" , "description": "Lotr Theme"},
-    {"path": "assets/rain.wav" , "description": "Medium Rain"}
+    {"path": "assets/rain.wav" , "description": "Medium Rain"},
+    {"path": "assets/gunshot.wav" , "description": "Gunshot"},
+    {"path": "assets/bowAndArrow.wav" , "description": "Throwing Arrow"},
+    {"path": "assets/horseWalking.wav" , "description": "Horse Walking"},
+    {"path": "assets/warHorn.wav" , "description": "War Horn"},
+    {"path": "assets/warSound.wav" , "description": "War Battle"}
   ]
 }
