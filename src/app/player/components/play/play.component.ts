@@ -9,6 +9,7 @@ import { SoundInfo } from '../../models';
   styleUrls: ['./play.component.css']
 })
 export class PlayComponent implements OnInit {
+  private paused: boolean = false;
 
   private currentTime = 0;
 
@@ -19,7 +20,6 @@ export class PlayComponent implements OnInit {
   ngOnInit(): void {
     this.soundInfos = [];
     this.getter();
-    console.log(this.soundInfos);
   }
 
   getter() {
@@ -31,23 +31,42 @@ export class PlayComponent implements OnInit {
     })
   }
 
-  play(soundInfo) {
+  startSound(soundInfo) {
     this.currentTime = soundInfo.audio.currentTime;
     soundInfo.audio.load();
     soundInfo.audio.currentTime = this.currentTime;
     soundInfo.audio.play();
-    if(soundInfo.audio.currentTime == soundInfo.audio.duration) {
-      soundInfo.audio.currentTime = 0;
-    }
   }
 
   pause(soundInfo) {
     soundInfo.audio.pause();
+    this.paused = true;
   }
 
   stop(soundInfo) {
     soundInfo.audio.pause();
     soundInfo.audio.currentTime = 0;
+  }
+  loop(soundInfo) {
+    soundInfo.audio.loop = true;
+    this.startSound(soundInfo);
+  }
+  notLoop(soundInfo) {
+    soundInfo.audio.loop = false;
+  }
+  play(soundInfo) {
+    this.notLoop(soundInfo);
+    if(!this.paused) {
+      this.restart(soundInfo);
+      this.startSound(soundInfo);
+    }
+    else {
+      this.startSound(soundInfo);
+      this.paused = false;
+    }
+  }
+  restart(soundInfo) {
+    soundInfo.audio.currentTime = 0.01;
   }
 
   setVolume(ev, soundInfo){
@@ -61,10 +80,6 @@ export class PlayComponent implements OnInit {
     else {
       return false;
     }
-  }
-
-  test() {
-    console.log("test");
   }
 
 }

@@ -17,10 +17,13 @@
           'border-color': (currentPlaying(sound) ? '#0f0' : '#0002')
         }">
         <p>{{ sound.sound.description }}</p>
+        <p>{{ sound.audio.ended }}</p>
         <div class="buttons">
+          <!--FIXME(Luiz): Border-Color doesn't turn green when button play is pressed the first time-->
           <button (click)="play(sound)">Play</button>
           <button (click)="pause(sound)">Pause</button>
           <button (click)="stop(sound)">Stop</button>
+          <button (click)="loop(sound)">Loop</button>
         </div>
         <p>{{ sound.audio.duration }}</p>
         <p>{{ sound.audio.currentTime }}</p>
