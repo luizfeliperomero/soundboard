@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { SoundService } from '../../services';
 import { Sound } from '../../models';
 import { SoundInfo } from '../../models';
@@ -8,7 +8,7 @@ import { SoundInfo } from '../../models';
   templateUrl: './play.component.html',
   styleUrls: ['./play.component.css']
 })
-export class PlayComponent implements OnInit {
+export class PlayComponent implements OnInit{
   private paused: boolean = false;
 
   private currentTime = 0;
@@ -66,7 +66,7 @@ export class PlayComponent implements OnInit {
     }
   }
   restart(soundInfo) {
-    soundInfo.audio.currentTime = 0.01;
+    soundInfo.audio.currentTime = 0;
   }
 
   setVolume(ev, soundInfo){

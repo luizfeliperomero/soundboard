@@ -17,18 +17,16 @@
           'border-color': (currentPlaying(sound) ? '#0f0' : '#0002')
         }">
         <p>{{ sound.sound.description }}</p>
-        <p>{{ sound.audio.ended }}</p>
-        <div class="buttons">
           <!--FIXME(Luiz): Border-Color doesn't turn green when button play is pressed the first time-->
-          <button (click)="play(sound)">Play</button>
-          <button (click)="pause(sound)">Pause</button>
-          <button (click)="stop(sound)">Stop</button>
-          <button (click)="loop(sound)">Loop</button>
+        <div class="btn-group shadow-0" role="group" aria-label="Basic example">
+          <button (click)="play(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Play</button>
+          <button (click)="pause(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Pause</button>
+          <button (click)="stop(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Stop</button>
+          <button (click)="loop(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Loop</button>
         </div>
-        <p>{{ sound.audio.duration }}</p>
-        <p>{{ sound.audio.currentTime }}</p>
+        <p>[DEBUG] {{ "CurrentTime: "+sound.audio.currentTime }}</p>
         <div class="volume">
-          <input type="range" min="0" max="1" step="0.01" value="0.5" (input)="setVolume($event, sound)">
+          <input type="range"  min="0" max="1" step="0.01" value="0.5" (input)="setVolume($event, sound)">
         </div>
       </div>
     </div>

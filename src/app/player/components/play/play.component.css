@@ -29,8 +29,9 @@ p {
 	font-weight: bold;
 }
 body {
-	background-image: url("../../../../assets/images/bgRpg.jpg");
+	background: rgba(0,0,0,0.4) url("../../../../assets/images/bgRpg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-blend-mode: darken;
 }
 
