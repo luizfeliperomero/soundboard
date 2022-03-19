@@ -14,15 +14,15 @@
   <div class="container">
     <div class="content">
       <div *ngFor="let sound of soundInfos" class="player" [ngStyle]="{
-          'border-color': (currentPlaying(sound) ? '#0f0' : '#0002')
+          'border-color': (currentPlaying(sound) ? '#01FF70' : '#0002')
         }">
         <p>{{ sound.sound.description }}</p>
           <!--FIXME(Luiz): Border-Color doesn't turn green when button play is pressed the first time-->
         <div class="btn-group shadow-0" role="group" aria-label="Basic example">
-          <button (click)="play(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Play</button>
-          <button (click)="pause(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Pause</button>
-          <button (click)="stop(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Stop</button>
-          <button (click)="loop(sound)" type="button" class="btn btn-outline-light" data-mdb-color="dark">Loop</button>
+          <button (click)="play(sound)" type="button" class="btn btn-default" data-mdb-color="dark"><a class="hvr-icon-fade"><i class="bi bi-play hvr-icon"></i></a></button>
+          <button (click)="pause(sound)" type="button" class="btn btn-default" data-mdb-color="dark"><a class="hvr-icon-fade"><i class="bi bi-pause hvr-icon"></i></a></button>
+          <button (click)="stop(sound)" type="button" class="btn btn-default" data-mdb-color="dark"><a class="hvr-icon-fade"><i class="bi bi-stop hvr-icon"></i></a></button>
+          <button (click)="loop(sound)" type="button" class="btn btn-default" data-mdb-color="dark"><a class="hvr-icon-fade"><i class="bi bi-arrow-repeat hvr-icon"></i></a></button>
         </div>
         <p>[DEBUG] {{ "CurrentTime: "+sound.audio.currentTime }}</p>
         <div class="volume">
