@@ -1,44 +1,32 @@
 .player {
-	float: left;
-	margin: 15px;
-	margin-top: 100px;
-	background-color: #0002;
-	padding-top: 60px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-	border-style: ridge  ;
+  background-color: #0002;
+  border-style: ridge;
+  margin: 10px;
 }
 .volume {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .container {
-	height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 button {
-	margin: 5px;
+  margin: 5px;
 }
 p {
-	display: flex;
-	justify-content: center;
-	color: #ffffff;
-	font-weight: bold;
-}
-body {
-	background: rgba(0,0,0,0.4) url("../../../../assets/images/bgRpg.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .bi {
-	color: #ffffff;
-	font-size: 30px;
+  color: #ffffff;
+  font-size: 30px;
 }
 input[type="range"] {
   -webkit-appearance: none;
-  margin-right: 15px;
   width: 200px;
   height: 7px;
   background: rgba(255, 255, 255, 0.6);
@@ -55,12 +43,43 @@ input[type="range"]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
-input[type=range]::-webkit-slider-runnable-track  {
+input[type="range"]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
   background: transparent;
+}
+.playing {
+  background-color: #0002;
+  border-style: ridge;
+  border-color: #01ff70;
+}
+.paused {
+  background-color: #0002;
+  border-style: ridge;
+  border-color: #0002;
+}
+button {
+  margin: 0px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+.groupNature {
+  display: flex;
+  background-color: #2f9;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mini-player {
+  display: flex;
+  flex-direction: column;
 }

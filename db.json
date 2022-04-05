@@ -1,11 +1,83 @@
 {
-  "Sound": [
-    {"path": "assets/lotrTheme.wav" , "description": "Lotr Theme"},
-    {"path": "assets/rain.wav" , "description": "Medium Rain"},
-    {"path": "assets/gunshot.wav" , "description": "Gunshot"},
-    {"path": "assets/bowAndArrow.wav" , "description": "Throwing Arrow"},
-    {"path": "assets/horseWalking.wav" , "description": "Horse Walking"},
-    {"path": "assets/warHorn.wav" , "description": "War Horn"},
-    {"path": "assets/warSound.wav" , "description": "War Battle"}
-  ]
+  "Group": {
+    "nature": [
+      {
+        "path": "assets/rain.wav",
+        "description": "Medium Rain",
+        "group": "nature"
+      }
+    ],
+    "music": [
+      {
+        "path": "assets/lotrTheme.wav",
+        "description": "Lotr Theme",
+        "group": "music"
+      },
+      {
+        "path": "assets/gunshot.wav",
+        "description": "Gunshot",
+        "group": "war"
+      },
+      {
+        "path": "assets/bowAndArrow.wav",
+        "description": "Throwing Arrow",
+        "group": "war"
+      },
+      {
+        "path": "assets/horseWalking.wav",
+        "description": "Horse Walking",
+        "group": "nature"
+      },
+      {
+        "path": "assets/warHorn.wav",
+        "description": "War Horn",
+        "group": "war"
+      },
+      {
+        "path": "assets/warSound.wav",
+        "description": "War Battle",
+        "group": "war"
+      },
+      {
+        "path": "assets/tavernAmbience.wav",
+        "description": "Tavern Ambience",
+        "group": "city"
+      },
+      {
+        "path": "assets/lotrTheme.wav",
+        "description": "Lotr Theme",
+        "group": "music"
+      },
+      {
+        "path": "assets/gunshot.wav",
+        "description": "Gunshot",
+        "group": "war"
+      },
+      {
+        "path": "assets/bowAndArrow.wav",
+        "description": "Throwing Arrow",
+        "group": "war"
+      },
+      {
+        "path": "assets/horseWalking.wav",
+        "description": "Horse Walking",
+        "group": "nature"
+      },
+      {
+        "path": "assets/warHorn.wav",
+        "description": "War Horn",
+        "group": "war"
+      },
+      {
+        "path": "assets/warSound.wav",
+        "description": "War Battle",
+        "group": "war"
+      },
+      {
+        "path": "assets/tavernAmbience.wav",
+        "description": "Tavern Ambience",
+        "group": "city"
+      }
+    ]
+  }
 }
