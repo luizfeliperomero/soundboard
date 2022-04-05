@@ -1,7 +1,6 @@
 .player {
   background-color: #0002;
   border-style: ridge;
-  margin: 10px;
 }
 .volume {
   display: flex;
@@ -9,7 +8,7 @@
 }
 .container {
   display: flex;
-  height: 100vh;
+  flex-wrap: wrap;
 }
 button {
   margin: 5px;
@@ -56,11 +55,13 @@ input[type="range"]::-webkit-slider-runnable-track {
   background-color: #0002;
   border-style: ridge;
   border-color: #01ff70;
+  margin: 2px;
 }
 .paused {
   background-color: #0002;
   border-style: ridge;
   border-color: #0002;
+  margin: 2px;
 }
 button {
   margin: 0px;
@@ -75,11 +76,9 @@ button {
 }
 .groupNature {
   display: flex;
-  background-color: #2f9;
+  background-color: #fff4;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-.mini-player {
-  display: flex;
-  flex-direction: column;
+  margin: 40px;
+  max-width: 40%;
+  justify-content: center;
 }

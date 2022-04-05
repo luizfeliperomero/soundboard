@@ -1,14 +1,76 @@
 <div class="container">
-  <div *ngFor="let sound of soundMusic" class="groupNature">
-    <div *ngIf="sound.isPlaying" class="sidebar bg-dark">
+  <div class="groupNature">
+    <div *ngFor="let sound of soundMusic">
+      <div *ngIf="sound.isPlaying" class="sidebar bg-dark">
+        <div
+          class="mini-player"
+          [ngClass]="{
+            playing: sound.isPlaying,
+            paused: !sound.isPlaying
+          }"
+        >
+          <p>{{ sound.sound.description }}</p>
+          <div
+            class="btn-group shadow-0"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button
+              (click)="play(sound)"
+              type="button"
+              class="btn btn-default"
+              data-mdb-color="dark"
+            >
+              <a class="hvr-icon-fade"><i class="bi bi-play hvr-icon"></i></a>
+            </button>
+            <button
+              (click)="pause(sound)"
+              type="button"
+              class="btn btn-default"
+              data-mdb-color="dark"
+            >
+              <a class="hvr-icon-fade"><i class="bi bi-pause hvr-icon"></i></a>
+            </button>
+            <button
+              (click)="stop(sound)"
+              type="button"
+              class="btn btn-default"
+              data-mdb-color="dark"
+            >
+              <a class="hvr-icon-fade"><i class="bi bi-stop hvr-icon"></i></a>
+            </button>
+            <button
+              (click)="loop(sound)"
+              type="button"
+              class="btn btn-default"
+              data-mdb-color="dark"
+            >
+              <a class="hvr-icon-fade"
+                ><i class="bi bi-arrow-repeat hvr-icon"></i
+              ></a>
+            </button>
+          </div>
+          <div class="volume">
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+              (input)="setVolume($event, sound)"
+            />
+          </div>
+        </div>
+      </div>
       <div
-        class="mini-player"
+        class="player"
         [ngClass]="{
           playing: sound.isPlaying,
           paused: !sound.isPlaying
         }"
       >
         <p>{{ sound.sound.description }}</p>
+        <!--FIXME(luizf): Border-Color doesn't turn back transparent when sound ends-->
         <div class="btn-group shadow-0" role="group" aria-label="Basic example">
           <button
             (click)="play(sound)"
@@ -55,62 +117,6 @@
             (input)="setVolume($event, sound)"
           />
         </div>
-      </div>
-    </div>
-    <div
-      class="player"
-      [ngClass]="{
-        playing: sound.isPlaying,
-        paused: !sound.isPlaying
-      }"
-    >
-      <p>{{ sound.sound.description }}</p>
-      <!--FIXME(luizf): Border-Color doesn't turn back transparent when sound ends-->
-      <div class="btn-group shadow-0" role="group" aria-label="Basic example">
-        <button
-          (click)="play(sound)"
-          type="button"
-          class="btn btn-default"
-          data-mdb-color="dark"
-        >
-          <a class="hvr-icon-fade"><i class="bi bi-play hvr-icon"></i></a>
-        </button>
-        <button
-          (click)="pause(sound)"
-          type="button"
-          class="btn btn-default"
-          data-mdb-color="dark"
-        >
-          <a class="hvr-icon-fade"><i class="bi bi-pause hvr-icon"></i></a>
-        </button>
-        <button
-          (click)="stop(sound)"
-          type="button"
-          class="btn btn-default"
-          data-mdb-color="dark"
-        >
-          <a class="hvr-icon-fade"><i class="bi bi-stop hvr-icon"></i></a>
-        </button>
-        <button
-          (click)="loop(sound)"
-          type="button"
-          class="btn btn-default"
-          data-mdb-color="dark"
-        >
-          <a class="hvr-icon-fade"
-            ><i class="bi bi-arrow-repeat hvr-icon"></i
-          ></a>
-        </button>
-      </div>
-      <div class="volume">
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value="0.5"
-          (input)="setVolume($event, sound)"
-        />
       </div>
     </div>
   </div>

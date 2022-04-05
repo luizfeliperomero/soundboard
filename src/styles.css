@@ -21,10 +21,3 @@
 .hvr-icon-fade:active .hvr-icon {
   color: #aaaaaa;
 }
-
-body {
-  background: rgba(0, 0, 0, 0.4) url("assets/images/bgRpg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
-}
