@@ -1,14 +1,14 @@
-<div *ngFor="let sound of soundMusic">
+<ng-template #tplPlayer let-sound>
   <div
     class="player"
     [ngClass]="{
-      playing: sound.isPlaying,
-      paused: !sound.isPlaying
-    }"
+          playing: sound.isPlaying,
+          paused: !sound.isPlaying
+        }"
   >
     <p>{{ sound.sound.description }}</p>
     <!--FIXME(luizf): Border-Color doesn't turn back transparent when sound ends-->
-    <div class="buttons" role="group" aria-label="Basic example">
+    <div class="btn-group shadow-0" role="group" aria-label="Basic example">
       <button
         (click)="play(sound)"
         type="button"
@@ -53,4 +53,4 @@
       />
     </div>
   </div>
-</div>
+</ng-template>

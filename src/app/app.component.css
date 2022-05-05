@@ -1,5 +1,15 @@
-body {
+.app {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   background: rgba(0, 0, 0, 0.4) url("../assets/images/bgDragon.jpg");
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-blend-mode: darken;
+}
+aside {
+  background-color: #1c1d2a;
+}
+.group {
+  display: flex;
+  flex-wrap: wrap;
 }
