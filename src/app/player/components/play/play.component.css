@@ -1,23 +1,20 @@
 .player {
   background-color: #0002;
   border-style: ridge;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .volume {
   display: flex;
   justify-content: center;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-button {
-  margin: 5px;
 }
 p {
   display: flex;
   justify-content: center;
   color: #ffffff;
   font-weight: bold;
+  margin-top: 15px;
 }
 
 .bi {
@@ -63,22 +60,8 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-color: #0002;
   margin: 2px;
 }
-button {
-  margin: 0px;
-}
-.sidebar {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 100%;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-}
-.groupNature {
-  display: flex;
-  background-color: #fff4;
-  flex-wrap: wrap;
-  margin: 40px;
-  max-width: 40%;
-  justify-content: center;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
 }

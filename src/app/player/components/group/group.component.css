@@ -1,0 +1,8 @@
+app-play {
+  display: flex;
+  background-color: #f284;
+  padding: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

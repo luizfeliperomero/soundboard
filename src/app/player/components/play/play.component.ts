@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SoundService } from '../../services';
-import { Sound, SoundInfo, Group } from '../../models';
+import { SoundInfo, Group } from '../../models';
 
 @Component({
   selector: 'app-play',

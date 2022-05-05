@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PlayComponent } from './player/components';
+import { GroupComponent, SidebarComponent } from './player/components';
 
 const routes: Routes = [
-  {path: '', component: PlayComponent}
+  { path: '', component: GroupComponent, outlet: 'group' },
+  { path: '', component: SidebarComponent, outlet: 'sidebar' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

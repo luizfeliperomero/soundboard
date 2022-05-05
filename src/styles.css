@@ -21,3 +21,8 @@
 .hvr-icon-fade:active .hvr-icon {
   color: #aaaaaa;
 }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
