@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+}
+ul li {
+  list-style-type: none;
+  margin: 10px;
+}
+ul li a {
+  color: #fff;
+}
+div {
+  padding: 10px;
+  color: #fff;
+}
