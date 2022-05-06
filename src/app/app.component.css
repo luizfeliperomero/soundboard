@@ -13,3 +13,9 @@ aside {
   display: flex;
   flex-wrap: wrap;
 }
+app-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
